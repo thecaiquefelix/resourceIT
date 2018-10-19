@@ -1,0 +1,16 @@
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\ResourceIT.Infra.dll.config
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\ResourceIT.Infra.dll
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\ResourceIT.Infra.pdb
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\EntityFramework.dll
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\ResourceIT.Domain.dll
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\ResourceIT.Domain.pdb
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\EntityFramework.xml
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\obj\Debug\ResourceIT.Infra.csprojAssemblyReference.cache
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\obj\Debug\ResourceIT.Infra.csproj.CoreCompileInputs.cache
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\obj\Debug\ResourceIT.Infra.csproj.CopyComplete
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\obj\Debug\ResourceIT.Infra.dll
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\obj\Debug\ResourceIT.Infra.pdb
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\obj\Debug\ResourceIT.Infra.Migrations.Firstmigration.resources
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Infra\obj\Debug\ResourceIT.Infra.csproj.GenerateResource.cache

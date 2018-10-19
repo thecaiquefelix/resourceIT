@@ -1,0 +1,6 @@
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Domain\bin\Debug\ResourceIT.Domain.dll
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Domain\bin\Debug\ResourceIT.Domain.pdb
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Domain\obj\Debug\ResourceIT.Domain.csprojAssemblyReference.cache
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Domain\obj\Debug\ResourceIT.Domain.csproj.CoreCompileInputs.cache
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Domain\obj\Debug\ResourceIT.Domain.dll
+C:\Users\caiqu\source\repos\ResourceIT\ResourceIT.Domain\obj\Debug\ResourceIT.Domain.pdb

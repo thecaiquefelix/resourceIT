@@ -1,0 +1,136 @@
+﻿@model ResourceIT.Domain.Usuario
+
+@{
+    ViewBag.Title = "Inclusao";
+}
+
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Scripts/jquery.unobtrusive-ajax.js"></script>
+<script>
+    function SuccessMessage() {
+        swal(
+            'Sucesso!',
+            'Usuario cadastrado com sucesso!',
+            'success'
+        )
+        window.location.href = '/detalhes/index';
+    }
+    function FailMessage() {
+        swal({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Aconteceu algum problema!',
+        })
+    }
+</script>
+
+<style>
+    input, select, textarea {
+        max-width: 1200px;
+    }
+</style>
+
+@using (Ajax.BeginForm("Inclusao", "Usuarios", null, new AjaxOptions
+{
+    HttpMethod = "POST",
+    OnSuccess = "SuccessMessage",
+    OnFailure = "FailMessage",
+}, new { id = "formInclusao" }))
+{
+    @Html.AntiForgeryToken()
+
+
+
+    <div class="col-md-10 col-md-offset-1" style="margin-top: 5%; padding-bottom:1.5%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+        <div style="text-align: center; background-image: linear-gradient(to right, #85d8ed , #0e77a8); padding-top:0%; height:60px;">
+
+            <div style="position: relative; top: 30%">
+                <h3>Inclusao Usuario</h3>
+            </div>
+
+        </div>
+
+        <br />
+
+        <div class="form-horizontal" style="text-align: center; background-color: #f2f2f2;">
+
+            <div class="row">
+                <div class="col-md-8" style="text-align: left">
+                    <strong>Nome</strong>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12 " style="text-align: left">
+                    @Html.TextBoxFor(model => model.Nome, new { @class = "form-control", style = "width: 100%;" })
+                    @Html.ValidationMessageFor(model => model.Nome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-8" style="text-align: left">
+                    <strong>Sobrenome</strong>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" style="text-align: left">
+                    @Html.EditorFor(model => model.Sobrenome, new { htmlAttributes = new { @class = "form-control", style = "width: 100%" } })
+                    @Html.ValidationMessageFor(model => model.Sobrenome, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-8" style="text-align: left">
+                    <strong>Email</strong>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" style="text-align: left">
+                    @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control", style = "width: 100%" } })
+                    @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <br />
+
+            <div class="row">
+                <div class="col-md-8" style="text-align: left">
+                    <strong>Telefone</strong>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-md-12" style="text-align: left">
+                    @Html.DropDownList("DetalheId", null, htmlAttributes: new { @class = "form-control", style = "width: 100%" })
+                    @Html.ValidationMessageFor(model => model.DetalheId, "", new { @class = "text-danger" })
+                </div>
+            </div>
+
+            <br />
+
+
+            <div class="col-md-12" style="text-align: right; padding-right: 0%;">
+
+                <a href="@Url.Action("Index", "Usuarios")" class="btn btn-default" style="background-image: linear-gradient(to right, #85d8ed, #0e77a8); width:150px;">
+                    Voltar para lista
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <input type="submit" value="Incluir" class="btn btn-default" style="background-image: linear-gradient(to right, #85d8ed, #0e77a8); width:150px;" />
+            </div>
+        </div>
+
+    </div>
+
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

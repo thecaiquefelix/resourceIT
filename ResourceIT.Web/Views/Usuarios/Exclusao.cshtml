@@ -1,0 +1,145 @@
+﻿@model ResourceIT.Domain.Usuario
+
+@{
+    ViewBag.Title = "Exclusao";
+}
+
+<script>
+    function SuccessMessage() {
+        swal(
+            'Sucesso!',
+            'Usuario deletado com sucesso!',
+            'success'
+        )
+        window.location.href = '/detalhes/index';
+    }
+    function FailMessage() {
+        swal({
+            type: 'error',
+            title: 'Oops...',
+            text: 'Aconteceu algum problema!',
+        })
+    }
+</script>
+
+<style>
+    input, select, textarea {
+        max-width: 1200px;
+    }
+</style>
+
+<div class="col-md-10 col-md-offset-1" style="margin-top: 5%; padding-bottom:1.5%; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);">
+
+    <div style="text-align: center; background-image: linear-gradient(to right, #ffb3b3 , #ff3333); padding-top:0%; height:60px;">
+
+        <div style="position: relative; top: 30%">
+            <h3>Exclusao Usuario</h3>
+        </div>
+
+    </div>
+
+    <h3>Você tem certeza que deseja excluir?</h3>
+
+    <div style="text-align: center; background-color: #f2f2f2;">
+
+        <div class="row">
+            <div class="col-md-8" style="text-align: left">
+                <strong>@Html.DisplayNameFor(model => model.Nome)</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align: left">
+                @Html.DisplayFor(model => model.Nome)
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-8" style="text-align: left">
+                <strong>@Html.DisplayNameFor(model => model.Sobrenome)</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align: left">
+                @Html.DisplayFor(model => model.Sobrenome)
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-8" style="text-align: left">
+                <strong>@Html.DisplayNameFor(model => model.Email)</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align: left">
+                @Html.DisplayFor(model => model.Email)
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-8" style="text-align: left">
+                <strong>@Html.DisplayNameFor(model => model.Detalhe.Telefone)</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align: left">
+                @Html.DisplayFor(model => model.Detalhe.Telefone)
+            </div>
+        </div>
+
+        <br />
+
+        <div class="row">
+            <div class="col-md-8" style="text-align: left">
+                <strong>@Html.DisplayNameFor(model => model.Detalhe.Endereco)</strong>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-12" style="text-align: left">
+                @Html.DisplayFor(model => model.Detalhe.Endereco)
+            </div>
+        </div>
+
+        <br />
+
+
+        @using (Ajax.BeginForm("Delete", "Usuarios", null, new AjaxOptions
+        {
+            HttpMethod = "POST",
+            OnSuccess = "SuccessMessage",
+            OnFailure = "FailMessage",
+        }, new { id = "formExclusao" }))
+        {
+            @Html.AntiForgeryToken()
+
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            @Html.HiddenFor(model => model.Id)
+
+            <div class="col-md-12" style="text-align: right; padding-right: 0%;">
+
+                <a href="@Url.Action("Index", "Usuarios")" class="btn btn-default" style="background-image: linear-gradient(to right, #85d8ed, #0e77a8); width:150px;">
+                    Voltar para lista
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                </a>
+
+                <input type="submit" value="Excluir" class="btn btn-default" style="background-color: #ff3333; width:150px;" />
+            </div>
+        }
+
+
+
+
+    </div>
+
+</div>
+
